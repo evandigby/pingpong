@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   ping:
-    image: docker.pkg.github.com/evandigby/pingpong/ping:${SVC_VERSION}
+    image: ghcr.io/evandigby/ping:${VERSION}
     build:
       context: .
       args: 
@@ -11,7 +11,7 @@ services:
       PING_INTERVAL: 1s
       PING_TIMEOUT: 1s
   pong:
-    image: docker.pkg.github.com/evandigby/pingpong/pong:${SVC_VERSION}
+    image: ghcr.io/evandigby/pong:${VERSION}
     build:
       context: .
       args: 
