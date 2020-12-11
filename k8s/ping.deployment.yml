@@ -17,6 +17,7 @@ spec:
       containers:
       - name: ping
         image: ghcr.io/evandigby/ping:latest
+        imagePullPolicy: Always
         env:
         - name: PING_PONGURL
           value: http://pong/ping

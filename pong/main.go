@@ -111,6 +111,12 @@ func requestHandler(log *logrus.Logger) http.HandlerFunc {
 				return
 			}
 
+			if string(reqText) != "PING" {
+				resp.WriteHeader(http.StatusBadRequest)
+				reqLog.Error("Bad request")
+				return
+			}
+
 			resp.WriteHeader(http.StatusOK)
 			resp.Write([]byte("PONG"))
 
