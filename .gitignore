@@ -1,0 +1,9 @@
+# Ignore files without extensions (linux binaries)
+*
+!*.*
+!*/
+
+# Ignore windows binaries
+*.exe
+
+!Dockerfile
